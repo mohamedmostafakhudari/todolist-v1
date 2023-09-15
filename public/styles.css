@@ -1,0 +1,109 @@
+:root {
+	--primary-400: hsl(264, 65%, 49%);
+	--primary-200: hsl(265, 73%, 87%);
+	--shadow: hsla(264, 95%, 16%, 0.3);
+}
+/* defaults */
+html {
+	box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+	margin: 0;
+	padding: 0;
+}
+html,
+body {
+	height: 100%;
+}
+ul {
+	list-style: none;
+}
+.flow > * + * {
+	margin-top: var(--flow-gap, 1rem);
+}
+.wrapper {
+	width: 26rem;
+}
+body {
+	background-image: linear-gradient(
+		30deg,
+		var(--primary-400),
+		var(--primary-400) 40%,
+		var(--primary-200) 40%
+	);
+	display: grid;
+	place-items: center;
+}
+h1 {
+	background-color: var(--primary-400);
+	color: white;
+	text-align: center;
+	padding-block: 0.5rem;
+	padding-inline: 2rem;
+	border-radius: 0.3rem;
+}
+
+.list-content {
+	background-color: white;
+	padding: 1rem;
+	margin-top: 2rem;
+	--flow-gap: 2rem;
+	box-shadow: 3px 3px 2px 0px var(--shadow);
+}
+input {
+	border: none;
+	padding-block: 0.5rem;
+	text-align: center;
+}
+button {
+	color: white;
+	background-color: var(--primary-400);
+	border-radius: 100%;
+	width: 2rem;
+	height: 2rem;
+	display: grid;
+	place-items: center;
+	border: none;
+	cursor: pointer;
+}
+form {
+	display: flex;
+	margin-top: 2rem;
+	gap: 1rem;
+}
+form > input {
+	flex: 1;
+}
+input:focus {
+	border: none;
+	outline: none;
+	border-bottom: 1px solid var(--primary-400);
+}
+ul li {
+	display: flex;
+	align-items: center;
+	gap: 2rem;
+}
+li input:checked + p {
+	text-decoration: line-through;
+	text-decoration-color: var(--primary-400);
+}
+.flex {
+	display: flex;
+	align-items: center;
+}
+.j-between {
+	justify-content: space-between;
+}
+.border {
+	border: 1px solid black;
+}
+.w-full {
+	width: 100%;
+}
+.gap-4 {
+	gap: 1rem;
+}
