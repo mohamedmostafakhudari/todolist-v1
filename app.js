@@ -3,7 +3,7 @@ const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 const utils = require(__dirname + "/utils");
 const app = express();
-
+const PORT = process.env.PORT || 3000;
 const urlEncodedParser = bodyParser.urlencoded({ extended: true });
 
 app.use(urlEncodedParser);
@@ -141,6 +141,6 @@ async function main() {
 	});
 }
 
-app.listen(3000, () => {
-	console.log("Server is running on port 3000");
+app.listen(PORT, () => {
+	console.log("Server is running on port " + PORT);
 });
